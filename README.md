@@ -1,4 +1,8 @@
 # Terminal Indicator
+Just a simple indicator for debugging purposes to launch a terminal window.
+
+![screenshot](./screenshot.png)
+
 ## Building and Installation
 You'll need the following dependencies:
 
