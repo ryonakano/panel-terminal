@@ -1,0 +1,20 @@
+Source: io.github.ryonakano.panel.terminal
+Section: x11
+Priority: optional
+Maintainer: Ryo Nakano <ryonakaknock3@gmail.com>
+Build-Depends: debhelper-compat (= 13),
+               libgranite-7-dev,
+               libgtk-4-dev,
+               libwingpanel-9-dev,
+               meson,
+               valac,
+Standards-Version: 4.7.4
+Homepage: https://github.com/ryonakano/terminal-indicator
+
+Package: io.github.ryonakano.panel.terminal
+Architecture: any
+Depends:
+    ${misc:Depends},
+    ${shlibs:Depends},
+Enhances: io.elementary.wingpanel
+Description: Wingpanel Terminal Indicator
