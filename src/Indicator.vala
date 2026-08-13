@@ -58,6 +58,8 @@ public class TerminalIndicator.Indicator : Wingpanel.Indicator {
                 warning ("Failed to launch terminal: %s", e.message);
             }
         });
+
+        visible = true;
     }
 
     public override Gtk.Widget get_display_widget () {
