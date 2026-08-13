@@ -40,23 +40,8 @@ public class TerminalIndicator.Indicator : Wingpanel.Indicator {
         main_widget.append (terminal_button);
 
         terminal_button.clicked.connect (() => {
-            Pid child_pid;
-
-            try {
-                Process.spawn_async ("/",
-                                    { "io.elementary.terminal" },
-                                    Environ.get (),
-                                    SpawnFlags.SEARCH_PATH | SpawnFlags.DO_NOT_REAP_CHILD,
-                                    null,
-                                    out child_pid);
-
-                ChildWatch.add (child_pid, (pid, status) => {
-                    // Triggered when the child indicated by child_pid exits
-                    Process.close_pid (pid);
-                });
-            } catch (SpawnError e) {
-                warning ("Failed to launch terminal: %s", e.message);
-            }
+            var window = new TerminalWindow ();
+            window.present ();
         });
 
         visible = true;

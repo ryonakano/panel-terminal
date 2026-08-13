@@ -1,5 +1,6 @@
 sources = [
   'Indicator.vala',
+  'TerminalWindow.vala',
 ]
 
 prefix = get_option('prefix')
@@ -14,6 +15,10 @@ shared_module(
   dependencies: [
     dependency('granite-7'),
     dependency('gtk4'),
+    dependency('gtk4-wayland'),
+    dependency('vte-2.91-gtk4', version: '>= 0.48'),
+    dependency('wayland-client'),
+    pantheon_desktop_shell_dep,
     wingpanel_dep,
   ],
   install: true,

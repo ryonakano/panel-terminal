@@ -4,6 +4,7 @@ You'll need the following dependencies:
 
 * libgranite-7-dev
 * libgtk-4-dev
+* libvte-2.91-gtk4-dev (>= 0.48)
 * libwingpanel-9-dev
 * meson
 * valac

@@ -10,4 +10,5 @@ add_project_arguments(
   language: 'c',
 )
 
+subdir('protocol')
 subdir('src')
