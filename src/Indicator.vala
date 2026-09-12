@@ -64,7 +64,7 @@ public class TerminalIndicator.Indicator : Wingpanel.Indicator {
     }
 }
 
-public Wingpanel.Indicator? get_indicator (Module module, Wingpanel.IndicatorManager.ServerType server_type) {
+public Wingpanel.Indicator? get_indicator (Module module, Wingpanel.ServerType server_type) {
     debug ("Activating Terminal Indicator");
 
     var indicator = new TerminalIndicator.Indicator ();
